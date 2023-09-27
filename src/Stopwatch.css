@@ -1,0 +1,33 @@
+body{
+    /* justify-content: center; */
+    /* text-align: center; */
+    background-image: url('/jigsaw-theme.jpeg');
+    display: flex;
+    /* text-size-adjust: 60%; */
+    
+    
+}
+#text{
+    justify-content: center;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 40px;
+    right: 170px
+}
+#img{
+    justify-content: center;
+    position: relative;
+
+}
+button{
+    position: relative;
+    right: 30px;
+}
+
+h1{
+    color: red;
+    position: relative;
+    bottom: 350px;
+    left: 400px;
+    justify-content: center;
+}
