@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 //we are importing these hooks that way we can use them
+import YouTube from 'react-youtube'
 import "../StopWatch.css";
 
 const Stopwatch = () => {
   const [time, setTime] = useState(0); //seting the initial time to be zero
   const [isRunning, setIsRunning] = useState(false); //we are creating is running to represent if the watch is running or not and using the bool useState to represent the start and stop
+  const [isPlaying, setIsPlaying]=useState(false)
+  const videoURL='2kdeewpqS48'
 
   useEffect(() => {
     //using to set up the start stop
@@ -33,14 +36,35 @@ const Stopwatch = () => {
     setTime(0);
   };
 
+ 
+  const video=()=>{
+    if(isPlaying==false){
+    setIsPlaying(true)
+  }else if(isPlaying==true){
+    setIsPlaying(false)
+  }
+}
+
+  
+
+
+  const handleStart=()=>{
+    startAndStop();
+    video();
+  }
+
+
+
   return (
     <body>
       <h1>I WANT TO PLAY A GAME</h1>
+      
         <img id="img" src="/5-old-tv-png-image-thumb.png" />
       <div id="text">
         <br></br>
         <br></br>
-        <div>
+        <div id="timer-buttons">
+        <div id="timer">
           {/* converting the times to strings and using padStart to */}
           {hours}:{min.toString().padStart(2, "0")}:
           {sec.toString().padStart(2, "0")}:
@@ -50,13 +74,19 @@ const Stopwatch = () => {
           <br></br>
           <br></br>
           <br></br>
-          <button id="start" onClick={startAndStop}>
+          <button id="start" onClick={handleStart}>
             {isRunning ? "Stop Game" : "Start Game"}
           </button>
           <button id="reset" onClick={reset}>
             Reset
           </button>
+          </div>
+          <div video>
+          </div>
         </div>
+          {isPlaying && <YouTube videoId={videoURL} />}
+          {<img id="billy" src="public/riding-a-tricycle-jigsaw.gif" width={200} height={200} />}
+          
         <br></br>
         <br></br>
         <br></br>

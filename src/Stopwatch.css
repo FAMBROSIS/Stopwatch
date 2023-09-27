@@ -1,33 +1,34 @@
 body{
-    /* justify-content: center; */
-    /* text-align: center; */
     background-image: url('/jigsaw-theme.jpeg');
-    display: flex;
-    /* text-size-adjust: 60%; */
+    color: red;
     
-    
-}
-#text{
-    justify-content: center;
-    background-repeat: no-repeat;
-    position: relative;
-    top: 40px;
-    right: 170px
-}
-#img{
-    justify-content: center;
-    position: relative;
-
-}
-button{
-    position: relative;
-    right: 30px;
 }
 
 h1{
     color: red;
     position: relative;
-    bottom: 350px;
-    left: 400px;
-    justify-content: center;
+    bottom: 200px;
+    background-color: black;
+    border-radius: 5px;  
+}
+
+#img{
+    position: fixed;
+    left: 200px;
+    bottom: 260px;
+}
+
+#timer-buttons{
+    position: fixed;
+    left: 15%;
+    
+    
+
+}
+#timer{
+    position: fixed;
+}
+
+button{
+    color: red;
 }
