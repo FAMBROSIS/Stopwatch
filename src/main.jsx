@@ -7,6 +7,6 @@ import StopwatchTwo from './components/Stopwatch2'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Stopwatch />
-    <StopwatchTwo />
+    {/* <StopwatchTwo /> */}
   </React.StrictMode>,
 )
