@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 //we are importing these hooks that way we can use them
 import YouTube from 'react-youtube'
-import "../StopWatch.css";
+import "../Stopwatch.css";
 
 const Stopwatch = () => {
   const [time, setTime] = useState(0); //seting the initial time to be zero
@@ -85,7 +85,7 @@ const Stopwatch = () => {
           </div>
         </div>
           {isPlaying && <YouTube videoId={videoURL} />}
-          {<img id="billy" src="public/riding-a-tricycle-jigsaw.gif" width={200} height={200} />}
+          {<img id="billy" src="/riding-a-tricycle-jigsaw.gif" width={200} height={200} />}
           
         <br></br>
         <br></br>
